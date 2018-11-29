@@ -1,0 +1,51 @@
+{
+  "width": 320,
+  "height": 400,
+  "fps": 30,
+  "main": "./main.js",
+  "assets": {
+    "main": {
+      "type": "script",
+      "path": "main.js",
+      "global": true
+  },
+  "ipa_font": {
+      "type": "image",
+      "width": 2048,
+      "height": 1024,
+      "path": "images/outfile.png"
+  },
+  "ipa_font_json": {
+    "type": "text",
+    "path": "font/font.json"
+    },
+  "text_image1": {
+      "type": "image",
+      "width": 240,
+      "height": 80,
+      "path": "images/text_image1.png"
+  },
+  "image_character1": {
+    "type": "image",
+    "width": 128,
+    "height": 128,
+    "path": "images/Dotpara.png"
+  },
+    "image_character2": {
+    "type": "image",
+    "width": 128,
+    "height": 128,
+    "path": "images/Dotpara2.png"
+  },
+    "image_character3": {
+    "type": "image",
+    "width": 128,
+    "height": 128,
+    "path": "images/Dotpara2.png"
+  }
+},
+  "environment": {
+    "sandbox-runtime": "2"
+  }
+}
+
