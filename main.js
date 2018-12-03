@@ -47,10 +47,15 @@ function main() {
         text: "診断する",
         fontSize: 30,
         textColor: "black",
-        x: 100,
+        x: 100 ,
         y: 140
       });
     scene.append(start_text);
+
+    // 質問画面に画面遷移
+    start_text.pointDown.handle(function () {
+      g.game.pushscene(Question());
+    })
 
     dot_character1.pointDown.handle(function () {
     scene.append(dot_character2)
