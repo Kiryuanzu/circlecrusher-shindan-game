@@ -161,7 +161,7 @@
         TypeANum += 2;
         g.game.replacescene(Question2Scene());
     });    
-  
+
     var question1_select4 = new g.Label({
       scene: scene,
       font: font,
@@ -181,5 +181,104 @@
     });
     return Question1Scene;
   }
+
+function Question2Scene() {
+    var scene = new g.Scene({game: g.game});
+    scene.loaded.add(function () {
+      // 基本背景とフォント設定
+    var bg = new g.FilledRect({
+      scene: scene,
+      cssColor: "white",
+      x: 0,
+      y: 0,
+      width: g.game.width,
+      height: g.game.height
+    });
+    scene.append(bg);
+
+    var font = new g.DynamicFont({
+      game: g.game,
+      fontFamily: g.FontFamily.SansSerif,
+      size: 15
+    });
+
+    var question_text = new g.Label({
+      scene: scene,
+      font: font,
+      text: "Q2, その場にいない人間の愚痴や悪口を言うことが多い",
+      fontSize: 30,
+      textColor: "black",
+      x: 100,
+      y: 140
+    });
+      scene.append(question_text);
+
+    var question2_select1 = new g.Label({
+      scene: scene,
+      font: font,
+      text: "あてはまる",
+      fontSize: 20,
+      textColor: "black",
+      x: 200,
+      y: 200
+    });
+    scene.append(question2_select1);
+
+    question2_select1.pointDown.handle(function () {
+        TypeANum += 4;
+        g.game.replacescene(Question3Scene());
+    });    
+
+    var question2_select2 = new g.Label({
+      scene: scene,
+      font: font,
+      text: "どちらかというと当てはまる",
+      fontSize: 20,
+      textColor: "black",
+      x: 200,
+      y: 220
+    });
+    scene.append(question2_select2);
+
+    question2_select2.pointDown.handle(function () {
+        TypeANum += 3;
+        g.game.replacescene(Question3Scene());
+    });     
+
+    var question2_select3 = new g.Label({
+      scene: scene,
+      font: font,
+      text: "どちらかというと当てはまらない",
+      fontSize: 20,
+      textColor: "black",
+      x: 200,
+      y: 240
+    });
+    scene.append(question2_select3);
+
+    question2_select3.pointDown.handle(function () {
+        TypeANum += 2;
+        g.game.replacescene(Question3Scene());
+    });    
+
+    var question2_select4 = new g.Label({
+      scene: scene,
+      font: font,
+      text: "当てはまらない",
+      fontSize: 20,
+      textColor: "black",
+      x: 200,
+      y: 260
+    });
+    scene.append(question2_select4);
+
+    question2_select4.pointDown.handle(function () {
+        TypeANum += 1;
+        g.game.replacescene(Question3Scene());
+    });
+
+    });
+    return Question2Scene;
+  }  
 
 module.exports = main;
